@@ -4,4 +4,4 @@ A simple project boilerplate for personal web projects.
 
 ## Setup ##
 
-After cloning the repo.
+Clone the repo. More to come soon.

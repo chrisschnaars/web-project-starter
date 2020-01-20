@@ -1,0 +1,45 @@
+html {
+  color: $color-text-base;
+  font-family: $font-family-body-regular;
+  font-size: 100%;
+  line-height: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-display-bold;
+  font-size: inherit;
+  font-weight: normal;
+  margin: 0;
+}
+
+p {
+  font-size: $body-font-size--mob;
+  line-height: $body-line-height--mob;
+  margin: 0 0 $space-4;
+
+  @media (min-width: $breakpoint-medium) {
+    font-size: $body-font-size;
+    line-height: $body-line-height;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  color: $color-text-base;
+  text-decoration: underline solid $color-action 2px;
+  text-underline-offset: 0.25rem;
+  transition: color $transition-duration-base $transition-timing-base;
+
+  &:focus,
+  &:hover {
+    color: $color-action;
+  }
+}
