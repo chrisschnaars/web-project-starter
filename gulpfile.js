@@ -1,18 +1,31 @@
 // Gulp
 const {gulp, src, dest, watch, series, parallel} = require('gulp');
 
-// Gulp Package
-const browsersync = require('browser-sync').create();
-const cssnano = require('cssnano');
+// Gernal Packages
+const browserSync = require('browser-sync').create();
 const del = require("del");
+const prefix = require('autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
+const rename = require('gulp-rename');
+
+// HTML
 const htmlValidator = require('gulp-w3c-html-validator');
+
+// Styles
+const cssnano = require('cssnano');
+const postcss = require('gulp-postcss');
+const sass = require('gulp-sass');
+
+// Scripts
+const babel = require('gulp-babel');
+const concat = require('gulp-concat');
+const jshint = require('gulp-jshint');
+const stylish = require('jshint-stylish');
+const uglify = require('gulp-uglify');
+
+// Assets
 const imagemin = require('gulp-imagemin');
 const newer = require('gulp-newer');
-const postcss = require('gulp-postcss');
-const prefix = require('autoprefixer');
-const rename = require('gulp-rename');
-const sourcemaps = require('gulp-sourcemaps');
-const sass = require('gulp-sass');
 
 // Paths to project folders
 const paths = {
@@ -28,7 +41,7 @@ const paths = {
   },
   scripts: {
     input: 'src/js/*',
-    dist: 'dist/js/'
+    output: 'dist/js/'
   },
   assets: {
     input: 'src/assets/**/*',
@@ -97,6 +110,29 @@ const styles = function (done) {
 		.pipe(dest(paths.styles.output));
 };
 
+// Lint scripts
+const lintScripts = function (done) {
+	return src(paths.scripts.input)
+		.pipe(jshint())
+		.pipe(jshint.reporter('jshint-stylish'));
+};
+
+// Build scripts
+const buildScripts = function (done) {
+  return src(paths.scripts.input)
+    .pipe(sourcemaps.init())
+    .pipe(babel(
+      {presets: [
+        "@babel/preset-env"
+      ]}
+    ))
+    .pipe(concat('main.js'))
+    .pipe(sourcemaps.write())
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(dest(paths.scripts.output));
+};
+
 // Watch for changes to the src directory
 const startServer = function (done) {
 	// Initialize BrowserSync
@@ -132,8 +168,8 @@ const watchSource = function (done) {
 exports.default = series(
 	cleanDist,
 	parallel(
-		// buildScripts,
-		// lintScripts,
+		buildScripts,
+		lintScripts,
 		styles,
 		images,
 		html
