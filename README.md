@@ -19,7 +19,7 @@ There are two Gulp tasks that can be run:
 
 All source files should live in the `src` directory. Gulp will build and serve these files from `dist`.  
 
-- This template comes with a pre-organized set of SCSS files that follow [ITCSS Architecture](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/). Put all new SCSS files inside of this directory, and Gulp will compile the SCSS into CSS, and put a minimized CSS file in `dist/css`.
+- This template comes with a pre-organized set of SCSS files that follow [ITCSS Architecture](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/). Put all new SCSS files inside of this directory, add any new files to the `main.scss` file, and Gulp will compile the SCSS into a minimized CSS file in `dist/css`.
 - All JS files should live in the `src/js` folder. Gulp will lint, concatenate, and minimize these files into `src/js`.
 - All assets (images, fonts, etc.) should live in `src/assets`. These will be optimized and placed into the `dist/assets` directory. Assets can (and should) live within subdirectories within `src/assets`.
 
