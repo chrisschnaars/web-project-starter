@@ -12,7 +12,8 @@ A project boilerplate for personal web projects. Uses Gulp to compile lint all f
 
 There are two Gulp tasks that can be run:
 - `gulp` will build your project files from the `src` directory into a `dist` directory.
-- `gulp watch` will build the project and launch a [BrowserSync](https://browsersync.io/) server at [localhost:3000/](localhost:3000/) and automatically refresh any time changes are made in the `/src` folder.
+- `gulp watch` will build the project and launch a [BrowserSync](https://browsersync.io/) server at [http://localhost:3000
+](localhost:3000/) and automatically refresh any time changes are made in the `/src` folder.
 
 ## Documentation
 
