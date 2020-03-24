@@ -15,12 +15,12 @@ const htmlValidator = require("gulp-w3c-html-validator");
 const cssnano = require("cssnano");
 const postcss = require("gulp-postcss");
 const sass = require("gulp-sass");
+const gulpStylelint = require("gulp-stylelint");
 
 // Scripts
 const babel = require("gulp-babel");
 const concat = require("gulp-concat");
-const jshint = require("gulp-jshint");
-const stylish = require("jshint-stylish");
+const eslint = require("gulp-eslint");
 const uglify = require("gulp-uglify");
 
 // Assets
@@ -77,6 +77,15 @@ const images = function(done) {
     .pipe(newer(paths.assets.output))
     .pipe(imagemin())
     .pipe(dest(paths.assets.output));
+};
+
+// Lint stylesheets
+const lintStyles = function(done) {
+  return src(paths.styles.input).pipe(
+    gulpStylelint({
+      reporters: [{ formatter: "string", console: true }]
+    })
+  );
 };
 
 // Process, lint, and minify Sass files
@@ -165,9 +174,12 @@ const watchSource = function(done) {
 // gulp
 exports.default = series(
   cleanDist,
-  parallel(buildScripts, lintScripts, styles, images, html)
+  parallel(buildScripts, lintScripts, lintStyles, styles, images, html)
 );
 
 // Watch and reload
 // gulp watch
 exports.watch = series(exports.default, startServer, watchSource);
+
+// Lint scripts and styles
+exports.lint = parallel(lintStyles, lintScripts);
