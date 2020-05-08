@@ -30,26 +30,26 @@ $color-action: $color-primary-orange;
 $base-space-value: 0.5rem;
 
 $space-values: (
-  "0": 0,
-  "1": $base-space-value,
-  "2": $base-space-value * 2,
-  "3": $base-space-value * 3,
-  "4": $base-space-value * 4,
-  "6": $base-space-value * 6,
-  "8": $base-space-value * 8,
-  "12": $base-space-value * 12,
-  "16": $base-space-value * 16,
+    '0': 0,
+    '1': $base-space-value,
+    '2': $base-space-value * 2,
+    '3': $base-space-value * 3,
+    '4': $base-space-value * 4,
+    '6': $base-space-value * 6,
+    '8': $base-space-value * 8,
+    '12': $base-space-value * 12,
+    '16': $base-space-value * 16,
 );
 
-$space-0: map-get($space-values, "0");
-$space-1: map-get($space-values, "1");
-$space-2: map-get($space-values, "2");
-$space-3: map-get($space-values, "3");
-$space-4: map-get($space-values, "4");
-$space-6: map-get($space-values, "6");
-$space-8: map-get($space-values, "8");
-$space-12: map-get($space-values, "12");
-$space-16: map-get($space-values, "16");
+$space-0: map-get($space-values, '0');
+$space-1: map-get($space-values, '1');
+$space-2: map-get($space-values, '2');
+$space-3: map-get($space-values, '3');
+$space-4: map-get($space-values, '4');
+$space-6: map-get($space-values, '6');
+$space-8: map-get($space-values, '8');
+$space-12: map-get($space-values, '12');
+$space-16: map-get($space-values, '16');
 
 $breakpoint-small: 32em;
 $breakpoint-medium: 48em;

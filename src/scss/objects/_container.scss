@@ -1,0 +1,12 @@
+.container {
+    width: 100%;
+}
+
+.container__inner-container {
+    padding: $space-3;
+    width: 100%;
+
+    @media (min-width: $breakpoint-medium) {
+        padding: $space-6;
+    }
+}
