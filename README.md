@@ -8,20 +8,25 @@ A project boilerplate for personal web projects. Uses Gulp to compile lint all f
 2. Make sure you have installed [Node.js](http://nodejs.org/) and [Gulp Command Line Utility](http://gulpjs.com/).
 3. Run `npm install` to install project dependencies.
 
-## Using Gulp
+## File Organization
 
-There are two Gulp tasks that can be run:
-- `gulp` will build your project files from the `src` directory into a `dist` directory.
-- `gulp watch` will build the project and launch a [BrowserSync](https://browsersync.io/) server at [http://localhost:3000
-](localhost:3000/) and automatically refresh any time changes are made in the `/src` folder.
+-   All source files should live in the `src` directory.
+-   All SCSS files live in `src/scss`. The folder organization in this directory follows [ITCSS Architecture](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/).
+-   All JS files should live in the `src/js` folder. All js modules live in the `/modules` folder.
+-   All assets (images, fonts, etc.) should live in `src/assets`.
 
-## Documentation
+## Development
 
-All source files should live in the `src` directory. Gulp will build and serve these files from `dist`.  
+This boilerplate uses [Parcel](https://parceljs.org/) to bundle files, handle development tasks, and ultimately build the app. Use `npm run dev` to launch the server at [http://localhost:1234].
 
-- This template comes with a pre-organized set of SCSS files that follow [ITCSS Architecture](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/). Put all new SCSS files inside of this directory, add any new files to the `main.scss` file, and Gulp will compile the SCSS into a minimized CSS file in `dist/css`.
-- All JS files should live in the `src/js` folder. Gulp will lint, concatenate, and minimize these files into `src/js`.
-- All assets (images, fonts, etc.) should live in `src/assets`. These will be optimized and placed into the `dist/assets` directory. Assets can (and should) live within subdirectories within `src/assets`.
+Notes:
+
+-   Parcel reloads with each change made.
+-   Parcel includes POSTCSS and Babel.
+
+## Building
+
+When you're ready to build the app, use `npm run build`.
 
 ## License
 
