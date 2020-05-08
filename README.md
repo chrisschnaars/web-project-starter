@@ -10,10 +10,10 @@ A project boilerplate for personal web projects. Uses Gulp to compile lint all f
 
 ## File Organization
 
-- All source files should live in the `src` directory.
-- All SCSS files live in `src/scss`. The folder organization in this directory follows [ITCSS Architecture](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/).
-- All JS files should live in the `src/js` folder. All js modules live in the `/modules` folder.
-- All assets (images, fonts, etc.) should live in `src/assets`.
+-   All source files should live in the `src` directory.
+-   All SCSS files live in `src/scss`. The folder organization in this directory follows [ITCSS Architecture](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/).
+-   All JS files should live in the `src/js` folder. All js modules live in the `/modules` folder.
+-   All assets (images, fonts, etc.) should live in `src/assets`.
 
 ## Development
 
@@ -21,8 +21,8 @@ This boilerplate uses [Parcel](https://parceljs.org/) to bundle files, handle de
 
 Notes:
 
-- Parcel reloads with each change made.
-- Parcel includes POSTCSS and Babel.
+-   Parcel reloads with each change made.
+-   Parcel includes POSTCSS and Babel.
 
 ## Building
 
