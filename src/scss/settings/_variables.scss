@@ -1,30 +1,30 @@
 // Fonts
-$font-family-body: sans-serif;
-$font-family-heading: serif;
+$font-family_body: sans-serif;
+$font-family_heading: serif;
 
 // Font Sizes
-$font-size-16: 1rem;
-$font-size-18: 1.125rem;
-$font-size-20: 1.25rem;
-$font-size-24: 1.5rem;
-$font-size-28: 1.75rem;
-$font-size-36: 2.25rem;
-$font-size-44: 2.75rem;
+$font-size_16: 1rem;
+$font-size_18: 1.125rem;
+$font-size_20: 1.25rem;
+$font-size_24: 1.5rem;
+$font-size_28: 1.75rem;
+$font-size_36: 2.25rem;
+$font-size_44: 2.75rem;
 
-$body-font-size: $font-size-24;
+$body-font-size: $font-size_24;
 $body-line-height: 1.5;
-$body-font-size--mob: $font-size-18;
+$body-font-size--mob: $font-size_18;
 $body-line-height--mob: 1.77778;
 
 // Colors
-$color-black: #1d1c1c;
-$color-gray: lighten($color-black, 30%);
-$color-lightest-gray: lighten($color-black, 85%);
-$color-white: #fff;
-$color-primary-orange: #fa6400;
+$color_black: #1d1c1c;
+$color_gray: lighten($color-black, 30%);
+$color_lightest-gray: lighten($color-black, 85%);
+$color_white: #fff;
+$color_primary-orange: #fa6400;
 
-$color-text-base: $color-black;
-$color-action: $color-primary-orange;
+$color_text-base: $color-black;
+$color_action: $color-primary-orange;
 
 // Spacing
 $base-space-value: 0.5rem;
@@ -51,13 +51,13 @@ $space-8: map-get($space-values, '8');
 $space-12: map-get($space-values, '12');
 $space-16: map-get($space-values, '16');
 
-$breakpoint-small: 32em;
-$breakpoint-medium: 48em;
-$breakpoint-large: 60em;
-$breakpoint-x-large: 75em;
+$breakpoint_small: 32em;
+$breakpoint_medium: 48em;
+$breakpoint_large: 60em;
+$breakpoint_x-large: 75em;
 
 // Timing
-$transition-duration-base: 125ms;
-$transition-duration-long: 300ms;
+$transition_duration-base: 125ms;
+$transition_duration-long: 300ms;
 
-$transition-timing-base: ease-in-out;
+$transition_timing-base: ease-in-out;

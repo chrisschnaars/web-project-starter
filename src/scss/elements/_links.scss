@@ -1,0 +1,11 @@
+a {
+    color: $color_text-base;
+    text-decoration: underline solid $color_action 2px;
+    text-underline-offset: 0.25rem;
+    transition: color $transition_duration-base $transition_timing-base;
+
+    &:focus,
+    &:hover {
+        color: $color_action;
+    }
+}

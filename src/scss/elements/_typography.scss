@@ -1,6 +1,6 @@
 html {
-    color: $color-text-base;
-    font-family: $font-family-body;
+    color: $color_text-base;
+    font-family: $font-family_body;
     font-size: 100%;
     line-height: 1;
 }
@@ -11,7 +11,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $font-family-heading;
+    font-family: $font-family_heading;
     margin: 0;
 }
 
@@ -20,24 +20,12 @@ p {
     line-height: $body-line-height--mob;
     margin: 0 0 $space-4;
 
-    @media (min-width: $breakpoint-medium) {
+    @media (min-width: $breakpoint_medium) {
         font-size: $body-font-size;
         line-height: $body-line-height;
     }
 
     &:last-of-type {
         margin-bottom: 0;
-    }
-}
-
-a {
-    color: $color-text-base;
-    text-decoration: underline solid $color-action 2px;
-    text-underline-offset: 0.25rem;
-    transition: color $transition-duration-base $transition-timing-base;
-
-    &:focus,
-    &:hover {
-        color: $color-action;
     }
 }
