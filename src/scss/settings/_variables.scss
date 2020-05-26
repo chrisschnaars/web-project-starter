@@ -1,6 +1,6 @@
 // Fonts
-$font-family_body: sans-serif;
-$font-family_heading: serif;
+$font-family_body: helvetica, sans-serif;
+$font-family_heading: helvetica, sans-serif;
 
 // Font Sizes
 $font-size_16: 1rem;
@@ -9,12 +9,17 @@ $font-size_20: 1.25rem;
 $font-size_24: 1.5rem;
 $font-size_28: 1.75rem;
 $font-size_36: 2.25rem;
-$font-size_44: 2.75rem;
+$font-size_42: 2.625rem;
 
-$body-font-size: $font-size_24;
-$body-line-height: 1.5;
-$body-font-size--mob: $font-size_18;
-$body-line-height--mob: 1.77778;
+// Font Weights
+$font-weight_heading: 600;
+$font-weight_sub-heading: 500;
+$font-weight_body: 400;
+
+$body-font-size: 1.125rem;
+$body-line-height: 1.5rem;
+$body-font-size--mob: 1rem;
+$body-line-height--mob: 1.5rem;
 
 // Colors
 $color_black: #1d1c1c;

@@ -2,19 +2,83 @@ html {
     color: $color_text-base;
     font-family: $font-family_body;
     font-size: 100%;
+    font-weight: $font-weight_body;
     line-height: 1;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: $font-family_heading;
-    margin: 0;
+/*
+  h1:
+  large screen: 42/44
+  small screen: 28/36
+*/
+h1 {
+    font-size: 1.75rem;
+    font-weight: $font-weight_heading;
+    line-height: 2.25rem;
+    margin-bottom: $space-6;
+
+    @media (min-width: $breakpoint_small) {
+        font-size: 2.625rem;
+        line-height: 2.75rem;
+    }
 }
 
+/*
+  h2:
+  large screen: 28/32
+  small screen: 24/28
+*/
+h2 {
+    font-size: 1.5rem;
+    font-weight: $font-weight_heading;
+    line-height: 1.75rem;
+    margin-bottom: $space-4;
+
+    @media (min-width: $breakpoint_small) {
+        font-size: 1.75rem;
+        line-height: 2rem;
+    }
+}
+
+/*
+  h3:
+  large screen: 26/32
+  small screen: 21/28
+*/
+h3 {
+    font-size: 1.3125rem;
+    font-weight: $font-weight_sub-heading;
+    line-height: 1.75rem;
+    margin-bottom: $space-3;
+
+    @media (min-width: $breakpoint_small) {
+        font-size: 1.625rem;
+        line-height: 2rem;
+    }
+}
+
+/*
+  h4:
+  large screen: 21/28
+  small screen: 18/24
+*/
+h4 {
+    font-size: 1.125rem;
+    font-weight: $font-weight_sub-heading;
+    line-height: 1.5rem;
+    margin-bottom: $space-2;
+
+    @media (min-width: $breakpoint_small) {
+        font-size: 1.3125rem;
+        line-height: 1.75rem;
+    }
+}
+
+/*
+  body copy:
+  large screen: 18/24
+  small screen: 16/20
+*/
 p {
     font-size: $body-font-size--mob;
     line-height: $body-line-height--mob;
@@ -27,5 +91,15 @@ p {
 
     &:last-of-type {
         margin-bottom: 0;
+    }
+}
+
+label {
+    font-size: $body-font-size--mob;
+    line-height: 1;
+    margin-bottom: $space-1;
+
+    @media (min-width: $breakpoint_medium) {
+        font-size: $body-font-size;
     }
 }
