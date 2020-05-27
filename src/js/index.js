@@ -1,4 +1,3 @@
-import '../scss/index.scss';
 import example from './modules/example';
 
 window.onload = function () {
