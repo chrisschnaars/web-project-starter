@@ -1,6 +1,6 @@
 # Web Project Starter
 
-A project boilerplate for personal web projects. Uses Gulp to compile lint all files, compile SCSS to CSS, concatenate and minimize CSS and JS files, and optimize images.
+A project boilerplate for personal web projects.
 
 ## Installation
 
